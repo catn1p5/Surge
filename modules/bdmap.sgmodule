@@ -1,0 +1,13 @@
+#!name=百度地图
+#!desc = 移除广告
+
+[Rule]
+DOMAIN, afd.baidu.com, REJECT
+DOMAIN, afdconf.baidu.com, REJECT
+DOMAIN, lc.map.baidu.com, REJECT
+
+[Map Local]
+^https:\/\/ecom\.map\.baidu\.com\/ad-ops\/afd\/popup\? data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% newclient.map.baidu.com

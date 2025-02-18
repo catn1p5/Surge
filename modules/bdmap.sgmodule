@@ -9,8 +9,8 @@ DOMAIN, lc.map.baidu.com, REJECT
 [URL Rewrite]
 ^https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?oem= reject
 ^https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?container= reject
-^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads reject
 
+^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads reject
 
 [Map Local]
 ^https:\/\/ecom\.map\.baidu\.com\/ad-ops\/afd\/popup\? data-type=text data="{}" status-code=200

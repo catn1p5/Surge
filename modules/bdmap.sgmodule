@@ -11,7 +11,7 @@ DOMAIN, mapyongche.cdn.bcebos.com, REJECT
 [URL Rewrite]
 
 [Body Rewrite]
-http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/noticebar\/get\? 'delpaths([["content","multi_data"]])'
+http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/client\/noticebar\/get\? 'delpaths([["content","multi_data"]])'
 
 [Map Local]
 ^https:\/\/ecom\.map\.baidu\.com\/ad-ops\/afd\/popup\? data-type=text data="{}" status-code=200

@@ -15,7 +15,7 @@ DOMAIN, mapyongche.cdn.bcebos.com, REJECT
 ^https:\/\/newclient\.map\.baidu\.com\/grow-engine\/api\/common\/userHome\? reject
 
 [Body Rewrite]
-#http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/client\/noticebar\/get\? 'delpaths([["content","multi_data"]])'
+http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/client\/noticebar\/get\? 'delpaths([["content","multi_data"]])'
 http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/(client\/)?usercenter\/mine\/page\? 'if (getpath([]) | has("data")) then (setpath(["data"]; {})) else . end'
 http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads&type=user_home_ctb_card_banner 'delpaths([["ads"]])'
 

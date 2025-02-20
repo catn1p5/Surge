@@ -28,12 +28,13 @@ http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads
 ^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/baseinfo$ data-type=text data="{}" status-code=200
 
 ^https:\/\/ecom\.map\.baidu\.com\/ad-ops\/afd\/popup\? data-type=text data="{}" status-code=200
+^https:\/\/ecom\.map\.baidu\.com\/ad-ops\/afd\/entry\? data-type=text data="{}" status-code=200
 
 ^https:\/\/maphotel\.baidu\.com\/hotel\/goextranet\/activity\/detail\? data-type=text data="{}" status-code=200
 
 [Script]
 组件包 = type = http-response, pattern = ^https:\/\/newclient\.map\.baidu\.com\/client\/imap\/dl\/s\/UpdateInfo\.php\?, script-path = https://raw.githubusercontent.com/catn1p5/Surge/main/Scripts/bdmap.js, requires-body=true
-我的页面 = type = http-response, pattern = ^https:\/\/newclient\.map\.baidu\.com\/(client\/)?usercenter\/mine\/page\?, script-path = https://raw.githubusercontent.com/catn1p5/Surge/main/Scripts/bdmap.js, requires-body=true 
+我的页面 = type = http-response, pattern = ^https:\/\/newclient\.map\.baidu\.com\/usercenter\/mine\/page\?, script-path = https://raw.githubusercontent.com/catn1p5/Surge/main/Scripts/bdmap.js, requires-body=true 
 横幅 = type = http-response, pattern = ^https:\/\/newclient\.map\.baidu\.com\/client\/noticebar\/get\?, script-path = https://raw.githubusercontent.com/catn1p5/Surge/main/Scripts/bdmap.js, requires-body=true 
 
 

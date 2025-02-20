@@ -19,11 +19,6 @@ DOMAIN, mapyongche.cdn.bcebos.com, REJECT
 http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/(client\/)?usercenter\/mine\/page\? 'if (getpath([]) | has("data")) then (setpath(["data"]; {})) else . end'
 http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads&type=user_home_ctb_card_banner 'delpaths([["ads"]])'
 
-http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/living\/nearby\/api\? 'delpaths([["Result","cards",1]])'
-http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/living\/nearby\/api\? 'delpaths([["Result","cards",4]])'
-http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/living\/nearby\/api\? 'delpaths([["Result","cards",5]])'
-http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/living\/nearby\/api\? 'delpaths([["Result","cards",9]])'
-
 [Map Local]
 ^https:\/\/afd\.baidu\.com\/afd\/entry\?action=(update|query) data-type=text data="{}" status-code=200
 
@@ -35,6 +30,10 @@ http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/living\/nearby\/api\? 'd
 ^https:\/\/ecom\.map\.baidu\.com\/ad-ops\/afd\/popup\? data-type=text data="{}" status-code=200
 
 ^https:\/\/maphotel\.baidu\.com\/hotel\/goextranet\/activity\/detail\? data-type=text data="{}" status-code=200
+
+[Script]
+组件包 = type = http-response, pattern = ^https:\/\/newclient\.map\.baidu\.com\/client\/imap\/dl\/s\/UpdateInfo\.php\?, script-path = https://raw.githubusercontent.com/catn1p5/Surge/main/Scripts/bdmap.js, requires-body=true
+
 
 [MITM]
 hostname = %APPEND% afd.baidu.com, newclient.map.baidu.com, yongche.baidu.com, ecom.map.baidu.com

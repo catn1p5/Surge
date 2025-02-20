@@ -16,7 +16,7 @@ DOMAIN, mapyongche.cdn.bcebos.com, REJECT
 
 [Body Rewrite]
 #http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/client\/noticebar\/get\? 'delpaths([["content","multi_data"]])'
-#http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/(client\/)?usercenter\/mine\/page\? 'if (getpath([]) | has("data")) then (setpath(["data"]; {})) else . end'
+http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/usercenter\/mine\/page\? 'if (getpath([]) | has("data")) then (setpath(["data"]; {})) else . end'
 http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads&type=user_home_ctb_card_banner 'delpaths([["ads"]])'
 
 [Map Local]
@@ -34,7 +34,7 @@ http-response-jq ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads
 
 [Script]
 组件包 = type = http-response, pattern = ^https:\/\/newclient\.map\.baidu\.com\/client\/imap\/dl\/s\/UpdateInfo\.php\?, script-path = https://raw.githubusercontent.com/catn1p5/Surge/main/Scripts/bdmap.js, requires-body=true
-我的页面 = type = http-response, pattern = ^https:\/\/newclient\.map\.baidu\.com\/usercenter\/mine\/page\?, script-path = https://raw.githubusercontent.com/catn1p5/Surge/main/Scripts/bdmap.js, requires-body=true 
+#我的页面 = type = http-response, pattern = ^https:\/\/newclient\.map\.baidu\.com\/usercenter\/mine\/page\?, script-path = https://raw.githubusercontent.com/catn1p5/Surge/main/Scripts/bdmap.js, requires-body=true 
 横幅 = type = http-response, pattern = ^https:\/\/newclient\.map\.baidu\.com\/client\/noticebar\/get\?, script-path = https://raw.githubusercontent.com/catn1p5/Surge/main/Scripts/bdmap.js, requires-body=true 
 
 

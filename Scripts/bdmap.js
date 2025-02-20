@@ -2,9 +2,12 @@ const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
-if (url.includes("/usercenter/mine/page")) {
+if (url.includes("/user/mine/page")) {
   const item = [
-    "gold", // 金币商城等活动
+    "ugc",
+    "car",
+    "voice",
+    "gold"
   ];
   if (obj.data) {
     item.forEach((i) => {

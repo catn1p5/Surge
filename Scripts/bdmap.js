@@ -2,7 +2,7 @@ const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
-if (url.includes("/user/mine/page")) {
+if (url.includes("/usercenter/mine/page")) {
   const item = [
     "ugc",
     "car",

@@ -1,0 +1,23 @@
+#!name = 财经
+#!desc = 移除广告
+
+[Rule]
+
+[URL Rewrite]
+
+# > dongfangcaifu
+^https?:\/\/[a-z]+\.eastmoney\.com\/infoService\/ url reject-200
+
+# > tonghuashun
+^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend url reject-200
+
+[Body Rewrite]
+
+[Map Local]
+
+[Script]
+# http-response ^https:\/\/recommend\.10jqka\.com\.cn\/app\/discover\/api\/v1\/recommend script-path=https://raw.githubusercontent.com/androidcn/userscripts/main/tonghuashun.js, requires-body=true, timeout=60, tag=THSblockAD
+png
+
+[MITM]
+hostname = %APPEND% adm.10jqka.com.cn, emdcadvertise.eastmoney.com

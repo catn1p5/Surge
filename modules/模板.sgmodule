@@ -1,0 +1,15 @@
+#!name = APP
+#!desc = 移除广告
+
+[Rule]
+
+[URL Rewrite]
+
+[Body Rewrite]
+
+[Map Local]
+
+[Script]
+
+[MITM]
+hostname = %APPEND% 

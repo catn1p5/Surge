@@ -1,0 +1,13 @@
+#!name=IOS屏蔽更新
+
+[Rule]
+
+[URL Rewrite]
+
+[Body Rewrite]
+
+[Map Local]
+
+[Script]
+
+[MITM]

@@ -6,10 +6,11 @@
 [URL Rewrite]
 
 # > dongfangcaifu
-^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/ url reject-200
+^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/ url reject
+^https?:\/\/swdlcdn\.eastmoney\.com\/app\/adimg\/ url reject
 
 # > tonghuashun
-^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend url reject-200
+^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend url reject
 
 [Body Rewrite]
 
@@ -18,4 +19,4 @@
 [Script]
 
 [MITM]
-hostname = %APPEND% adm.10jqka.com.cn, emdcadvertise.eastmoney.com
+hostname = %APPEND% adm.10jqka.com.cn, emdcadvertise.eastmoney.com, swdlcdn.eastmoney.com
